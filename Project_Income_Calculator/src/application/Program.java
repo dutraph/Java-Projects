@@ -51,7 +51,7 @@ public class Program {
 			w1.addContract(hc);
 		}
 		
-		System.out.println("Enter month and year to calculate income (MM/YYYY): ");
+		System.out.print("Enter month and year to calculate income (MM/YYYY): ");
 		Date incomeDate =  sdf2.parse(sc.next());
 		cal.setTime(incomeDate);
 		int incMonth = 1 + cal.get(Calendar.MONTH);

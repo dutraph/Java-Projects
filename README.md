@@ -1,3 +1,3 @@
 # Java-Projects
 
-** Some basic projects throughout my learning path. ** 
+**Some basic projects throughout my learning path.** 

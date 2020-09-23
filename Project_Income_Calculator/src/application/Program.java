@@ -30,7 +30,7 @@ public class Program {
 		System.out.print("Level: (EX: JUNIOR/MID-LEVEL/SENIOR): ");
 		String level = sc.nextLine();
 
-		System.out.println("Base salary: ");
+		System.out.print("Base salary: ");
 		double baseSalary = sc.nextDouble();
 		
 		Worker w1 = new Worker(name, WorkerLevel.valueOf(level), baseSalary, new Department(departmentName));

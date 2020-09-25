@@ -36,7 +36,7 @@ public class Program {
 		Product prod;
 		Order order = new Order();
 		Client c1 = new Client(name, email, date);
-		System.out.println(c1);
+		//System.out.println(c1);
 		
 		
 		
@@ -46,8 +46,8 @@ public class Program {
 		for (int i = 0; i < numItems; i++) {
 			System.out.println("Enter " + (i + 1) + " item data: ");
 			System.out.print("Product name: ");
-			String prodName = sc.next();
 			sc.nextLine();
+			String prodName = sc.nextLine();
 			System.out.print("Product price: ");
 			Double price = sc.nextDouble();
 			prod = new Product(prodName, price);

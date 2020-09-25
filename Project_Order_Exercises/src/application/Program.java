@@ -2,6 +2,7 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 import entities.Client;
@@ -15,7 +16,9 @@ public class Program {
 	public static void main(String[] args) throws ParseException {
 
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss ");
+		
+		SimpleDateFormat sdfBD = new SimpleDateFormat("dd/MM/yyyy");
+//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss ");
 
 		System.out.println("Enter client data: ");
 		System.out.print("Name: ");
@@ -23,9 +26,10 @@ public class Program {
 		System.out.print("Email: ");
 		String email = sc.nextLine();
 		System.out.print("Birth Date (DD/MM/YYYY): ");
-		String date = sc.nextLine();
+		Date date = sdfBD.parse(sc.next());
+		sc.nextLine();
 		
-		System.out.println("Status: ");
+		System.out.print("Status: ");
 		String orderStatus = sc.nextLine();
 		OrderStatus status = OrderStatus.valueOf(orderStatus);
 		OrderItem orderItems;
@@ -36,7 +40,7 @@ public class Program {
 		
 		
 		
-		System.out.println("How many items in this order?  ");
+		System.out.print("How many items in this order?  ");
 		int numItems = sc.nextInt();
 
 		for (int i = 0; i < numItems; i++) {

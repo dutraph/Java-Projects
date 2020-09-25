@@ -1,12 +1,14 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 import entities.enums.OrderStatus;
 
 public class Order {
-	
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
 	private Date moment = new Date();
 	private OrderStatus status;
 	private ArrayList<OrderItem> orderItens = new ArrayList<OrderItem>();
@@ -62,7 +64,7 @@ public class Order {
 		StringBuilder sb = new StringBuilder();
 		sb.append("\n");
 		sb.append("ORDER SUMMARY: " + "\n");
-		sb.append("Order moment: " + getMoment() + "\n");
+		sb.append("Order moment: " + sdf.format(getMoment()) + "\n");
 		sb.append("Order status: " + getStatus() + "\n");
 		sb.append("Client: " + getClient() + "\n");
 		sb.append("Order items: " +"\n");

@@ -23,6 +23,7 @@ public class Program {
 		int n = sc.nextInt();
 		
 		for (int i = 0; i < n ; i++) {
+			System.out.println();
 			System.out.println("Product #" + (i + 1) + " data: ");
 			System.out.print("Common, Used or Imported. (c/u/i): ");
 			char type = sc.next().charAt(0);
@@ -44,7 +45,7 @@ public class Program {
 				prodList.add(new Product(name, price));
 			}	
 		}
-		
+		System.out.println();
 		for (Product product : prodList) {
 			System.out.println(product);
 		}
